@@ -1,0 +1,210 @@
+/*:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #535bf2;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #646cff;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+*/
+
+.navbar{
+  background-color: #201f1f;
+}
+
+.navbar-brand{
+  color: white !important;
+}
+
+.btn-dark-custom{
+  color: white !important;
+  border: 1px solid white !important;
+}
+
+.btn-dark-custom:hover{
+  background-color: skyblue !important;
+  color: black !important;
+}
+
+.btn-cart{
+  color: aqua !important;
+  border: 1px solid aqua !important;
+}
+
+.btn-cart:hover{
+  background-color: skyblue !important;
+  color: black !important;
+}
+
+.fondo {
+  position: relative;
+  background-image: url('/img/Header.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+.fondo .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.fondo .titulos {
+  z-index: 2;
+  text-align: center;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  background-color: white;
+  text-align: center;
+}
+
+.card-pizza {
+  width: 350px;
+  background-color: white;
+  border-radius: 1rem;
+  box-shadow: 0 6px 16px rgba(10, 10, 10, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-pizza:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(11, 11, 11, 0.15);
+}
+
+.card-pizza img {
+  width: 100%;
+  height: 200px;
+}
+
+.card-pizza h5 {
+  font-size: 1.4rem;
+  color: black;
+
+}
+
+.card-price {
+  padding: 5px;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: black;
+}
+
+.card-ingredients {
+  color: gray;
+  font-size: 15px;
+  text-align: center;
+}
+
+.card-buttons{
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.card-buttons a{
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 10px;
+  color: black;
+  padding-inline: 5px;
+}
+
+.card-buttons a:hover{
+  background-color: aqua;
+}
+
+.card-buttons button{
+  background-color: black;
+  color: white;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding-inline: 10px;
+}
+
+.card-buttons button:hover{
+  background-color: gray;
+}
+
+.pie{
+  background-color: black;
+  text-align: center;
+  color: white;
+  padding: 10px;
+}

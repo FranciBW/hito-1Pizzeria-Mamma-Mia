@@ -141,6 +141,7 @@ button:focus-visible {
   box-shadow: 0 6px 16px rgba(10, 10, 10, 0.1);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
 }
 
 .card-pizza:hover {
@@ -151,12 +152,15 @@ button:focus-visible {
 .card-pizza img {
   width: 100%;
   height: 200px;
+  object-fit: cover;
 }
 
-.card-pizza h5 {
+.card-title {
   font-size: 1.4rem;
   color: black;
-
+  text-align: center;
+  text-transform: capitalize;
+  margin-bottom: 10px;
 }
 
 .card-price {
@@ -169,7 +173,22 @@ button:focus-visible {
 .card-ingredients {
   color: gray;
   font-size: 15px;
+  text-align: left;
+  padding: 0 1rem;
+}
+
+.card-ingredients p{
   text-align: center;
+}
+
+.card-ingredients ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.card-ingredients li {
+  margin: 4px 0;
 }
 
 .card-buttons{
@@ -281,4 +300,70 @@ button:focus-visible {
 
 .login button:hover{
   background-color: aqua;
+}
+
+.cart {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  border: 1px solid gray;
+  border-radius: 1rem;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.cart h2 {
+  margin-bottom: 1.5rem;
+}
+
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  gap: 1rem;
+}
+
+.cart-info {
+  flex: 1;
+}
+
+.cart-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cart-controls button {
+  padding: 5px 10px;
+  border: none;
+  background-color: gray;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.cart-controls button:hover {
+  background-color: gray;
+}
+
+.pay-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 10px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.pay-btn:hover {
+  background-color: gray;
 }

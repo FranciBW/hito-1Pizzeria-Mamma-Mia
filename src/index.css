@@ -124,74 +124,57 @@ button:focus-visible {
   text-align: center;
 }
 
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2rem;
+.pizza-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 1.5rem;
   padding: 2rem;
+  margin: 10px;
+}
+
+.pizza-card {
   background-color: white;
+  border: 1px solid white;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   text-align: center;
+  transition: transform 0.2s ease;
 }
 
-.card-pizza {
-  width: 350px;
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 6px 16px rgba(10, 10, 10, 0.1);
-  overflow: hidden;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
-}
-
-.card-pizza:hover {
+.pizza-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 24px rgba(11, 11, 11, 0.15);
 }
 
-.card-pizza img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
+.pizza-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  margin-bottom: 1rem;
 }
 
-.card-title {
-  font-size: 1.4rem;
-  color: black;
-  text-align: center;
-  text-transform: capitalize;
-  margin-bottom: 10px;
+.pizza-card h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  text-transform: uppercase;
 }
 
-.card-price {
-  padding: 5px;
-  font-weight: bold;
-  font-size: 1.1rem;
-  color: black;
+.pizza-card p {
+  font-size: 1rem;
+  margin: 10px;
 }
 
-.card-ingredients {
-  color: gray;
-  font-size: 15px;
-  text-align: left;
-  padding: 0 1rem;
-}
-
-.card-ingredients p{
-  text-align: center;
-}
-
-.card-ingredients ul {
+.pizza-card ul {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 10px;
 }
 
-.card-ingredients li {
-  margin: 4px 0;
+.pizza-card li {
+  font-size: 0.9rem;
 }
 
-.card-buttons{
+.card-buttons {
   display: flex;
   justify-content: space-evenly;
   margin: 10px;
@@ -219,6 +202,37 @@ button:focus-visible {
 
 .card-buttons button:hover{
   background-color: gray;
+}
+
+.pizza-detail {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.pizza-detail img {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.pizza-detail h1 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+}
+
+.pizza-detail ul {
+  list-style: disc;
+  margin: 1rem 0;
+  text-align: left;
+  padding-left: 1.5rem;
+  list-style: none;
 }
 
 .pie{

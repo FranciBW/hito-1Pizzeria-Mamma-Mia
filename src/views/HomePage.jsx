@@ -1,9 +1,9 @@
-import { useEffect, useState } from 'react'
-import Header from './Header'
-import CardPizza from './CardPizza'
+// import CardPizza from './CardPizza'
 // import { pizzas } from '../data/pizzas'
+import { useEffect, useState } from "react"
+import Header from "../components/Header"
 
-const Home = () => {
+const HomePage = () => {
   const [pizzas, setPizzas] = useState([])
 
   useEffect(() => {
@@ -46,4 +46,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomePage

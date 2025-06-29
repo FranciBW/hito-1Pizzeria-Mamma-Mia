@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { pizzaCart } from '../data/pizzas'
 
-const Cart = () => {
+const CartPage = () => {
   const [cart, setCart] = useState(pizzaCart)
 
   const increase = (id) => {
@@ -55,4 +55,4 @@ const Cart = () => {
   )
 }
 
-export default Cart
+export default CartPage

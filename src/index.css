@@ -68,6 +68,10 @@ button:focus-visible {
 }
 */
 
+body{
+  margin: 0;
+}
+
 .navbar{
   background-color: #201f1f;
 }
@@ -380,4 +384,28 @@ button:focus-visible {
 
 .pay-btn:hover {
   background-color: gray;
+}
+
+.profile-card{
+  max-width: 500px;
+  margin: 40px auto;
+  border: 1px solid black;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+  text-align: center;
+}
+
+.profile-card button{
+  width: 30%;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: skyblue;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  display: block;
+}
+
+.profile-card button:hover{
+  background-color: aqua;
 }

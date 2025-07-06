@@ -1,10 +1,12 @@
 // import CardPizza from './CardPizza'
 // import { pizzas } from '../data/pizzas'
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import Header from "../components/Header"
+import { CartContext } from "../context/CartContext"
 
 const HomePage = () => {
   const [pizzas, setPizzas] = useState([])
+  const { cart, setCart } = useContext(CartContext)
 
   useEffect(() => {
     const fetchPizzas = async () => {
@@ -19,6 +21,18 @@ const HomePage = () => {
 
     fetchPizzas()
   }, [])
+
+    const addToCart = (pizza) => {
+    const exists = cart.find(item => item.id === pizza.id)
+    if (exists) {
+      setCart(cart.map(item =>
+        item.id === pizza.id ? { ...item, count: item.count + 1 } : item
+      ));
+    } else {
+      setCart([...cart, { ...pizza, count: 1 }])
+    }
+  }
+
   return (
     <>
       <Header />
@@ -37,7 +51,7 @@ const HomePage = () => {
             <p><strong>${pizza.price.toLocaleString("es-CL")}</strong></p>
             <div className="card-buttons">
               <a href="#">Ver Más 👀</a>
-              <button>Añadir 🛒</button>
+              <button onClick={() => addToCart(pizza)}>Añadir 🛒</button>
             </div>
           </div>
         ))}

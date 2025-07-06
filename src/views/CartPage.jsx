@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
-import { pizzaCart } from '../data/pizzas'
+import { useContext } from 'react';
+import { CartContext } from '../context/CartContext';
 
 const CartPage = () => {
-  const [cart, setCart] = useState(pizzaCart)
+  const { cart, setCart } = useContext(CartContext)
 
   const increase = (id) => {
     const updated = cart.map(item =>
@@ -13,12 +13,7 @@ const CartPage = () => {
 
   const decrease = (id) => {
     const updated = cart
-      .map(item => {
-        if (item.id === id) {
-          return { ...item, count: item.count - 1 }
-        }
-        return item
-      })
+      .map(item => item.id === id ? { ...item, count: item.count - 1 } : item)
       .filter(item => item.count > 0)
     setCart(updated)
   }

@@ -202,10 +202,15 @@ body{
   border: 1px solid black;
   border-radius: 10px;
   padding-inline: 10px;
+  transition: transform 0.05s ease;
 }
 
 .card-buttons button:hover{
   background-color: gray;
+}
+
+.card-buttons button:active{
+  transform: scale(0.96);
 }
 
 .pizza-detail {
@@ -277,10 +282,15 @@ body{
   border-radius: 15px;
   cursor: pointer;
   display: block;
+  transition: transform 0.05s ease;
 }
 
 .register button:hover{
   background-color: aqua;
+}
+
+.register button:active{
+  transform: scale(0.96);
 }
 
 .login {
@@ -314,10 +324,15 @@ body{
   border-radius: 15px;
   cursor: pointer;
   display: block;
+  transition: transform 0.05s ease;
 }
 
 .login button:hover{
   background-color: aqua;
+}
+
+.login button:active{
+  transform: scale(0.96);
 }
 
 .cart {
@@ -380,10 +395,14 @@ body{
   border-radius: 10px;
   font-size: 1rem;
   cursor: pointer;
+  transition: transform 0.05s ease;
 }
 
 .pay-btn:hover {
   background-color: gray;
+}
+.pay-btn:active {
+   transform: scale(0.96);
 }
 
 .profile-card{
@@ -404,8 +423,13 @@ body{
   border-radius: 15px;
   cursor: pointer;
   display: block;
+  transition: transform 0.05s ease;
 }
 
 .profile-card button:hover{
   background-color: aqua;
+}
+
+.profile-card button:active{
+  transform: scale(0.96);
 }

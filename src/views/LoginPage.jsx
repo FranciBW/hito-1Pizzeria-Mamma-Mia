@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { toast } from 'react-toastify'
 
 const LoginPage = () => {
     const [email, setEmail] = useState("")
@@ -7,14 +8,14 @@ const LoginPage = () => {
     const validarInicio = (e) => {
         e.preventDefault()
         if (!email.trim()|| !password.trim() ) {
-            alert("todos los campos son obligatorios")
+            toast.error("todos los campos son obligatorios")
             return
         }
         if (password.length < 6) {
-            alert("La contraseña debe tener al menos 6 caracteres")
+            toast.error("La contraseña debe tener al menos 6 caracteres")
             return 
         }
-        alert("Inicio de sesion exitoso 🎉")
+        toast.success("Inicio de sesion exitoso 🎉")
     }
   return (
     <div className='login'>

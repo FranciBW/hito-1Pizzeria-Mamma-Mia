@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { toast } from 'react-toastify'
 
 const RegisterPage = () => {
     const [email, setEmail] = useState("")
@@ -8,17 +9,18 @@ const RegisterPage = () => {
     const validarRegistro = (e) => {
         e.preventDefault()
         if (!email.trim() || !password.trim() || !confirmPassword.trim()) {
-            alert("todos los campos son obligatorios")
+            toast.error("todos los campos son obligatorios")
             return
         }
         if (password.length < 6) {
-            alert("La contraseña debe tener al menos 6 caracteres")
+            toast.error("La contraseña debe tener al menos 6 caracteres")
             return
         }
         if (password !== confirmPassword) {
-            alert("Las contraseñas no coinciden")
+            toast.error("Las contraseñas no coinciden")
+            return
         }
-        alert("Registro Exitoso 🎉")
+        toast.success("Registro Exitoso 🎉")
     }
     return (
         <div className='register'>

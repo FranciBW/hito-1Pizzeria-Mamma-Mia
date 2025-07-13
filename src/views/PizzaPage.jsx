@@ -1,19 +1,21 @@
 import { useEffect, useState } from "react"
+import { Link, useParams } from "react-router-dom"
 
 const PizzaPage = () => {
-  const [pizza, setPizza] = useState("")
+  const {id} = useParams()
+  const [pizza, setPizza] = useState(null)
 
   useEffect(() => {
     const getPizza = async () => {
-      const res = await fetch("http://localhost:5000/api/pizzas/p001")
+      const res = await fetch(`http://localhost:5000/api/pizzas/${id}`)
       const data = await res.json()
       setPizza(data)
     }
 
     getPizza()
-  }, [])
+  }, [id])
 
-  if (!pizza) return
+  if (!pizza) return <p>Cargando pizza...</p>
 
   return (
     <div className="pizza-detail">
@@ -28,8 +30,7 @@ const PizzaPage = () => {
       </ul>
       <p><strong>${pizza.price.toLocaleString("es-CL")}</strong></p>
       <div className="card-buttons">
-        <a href="#">Ver Más 👀</a>
-        <button>Añadir 🛒</button>
+        <Link to="/" className="btn btn mt-3">Volver al inicio</Link>
       </div>
     </div>
   )

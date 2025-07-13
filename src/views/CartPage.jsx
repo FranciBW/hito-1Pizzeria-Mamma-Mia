@@ -1,7 +1,9 @@
 import { useContext } from 'react';
 import { CartContext } from '../context/CartContext';
+import { UserContext } from '../context/UserContext';
 
 const CartPage = () => {
+  const {token} = useContext(UserContext)
   const { cart, setCart } = useContext(CartContext)
 
   const increase = (id) => {
@@ -45,7 +47,7 @@ const CartPage = () => {
       )}
       <hr />
       <h3>Total: ${total.toLocaleString('es-CL')}</h3>
-      <button className="pay-btn">Pagar 🧾</button>
+      <button disabled={!token} className="pay-btn">Pagar 🧾</button>
     </div>
   )
 }
